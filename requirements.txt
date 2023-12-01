@@ -1,0 +1,6 @@
+pwinput
+aiofiles
+requests
+colour
+pick
+pytz
