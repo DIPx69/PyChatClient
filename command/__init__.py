@@ -7,4 +7,4 @@ from .register import *
 from .info_validation import *
 from .rooms import *
 from .create_room import *
-version = 1.3
+version = 1.5
