@@ -11,7 +11,8 @@ import command as cmd
 from pick import pick
 from colour import Color
 # Code Info
-verison = 1.2
+# Developer: Dip Dey
+# Project Name: PyChat
 
 def main_menu():
    cmd.logo(0.1)
