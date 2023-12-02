@@ -9,6 +9,7 @@ def user_menu():
    verify_login()
    menus()
 def menus():
+   cmd.typing(f"\n[ X ] Version {cmd.version}\n",0.1)
    cmd.typing(f"\n[ 1 ] Profile\n",0.1)
    cmd.typing(f"\n[ 2 ] Chat Rooms\n",0.1)
    cmd.typing(f"\n[ 3 ] Create Room\n",0.1)
@@ -27,25 +28,8 @@ def logout():
   filename = sys.argv[0]
   os.system(f"python {filename}")
 
-def ask_menux():
-  try:
-   menu = int(input(""))
-   if menu == 1:
-     cmd.profile()
-   elif menu == 2:
-     cmd.rooms()
-   elif menu == 3:
-     cmd.create_room()
-   elif menu == 4:
-     logout()
-   else:
-     ask_menu(1)
-  except Exception as e:
-   print(e)
-   cmd.typing("\n> Invalid Menu Enter Again <",0.3)
-   cmd.typing("\n\n[ ~ ] Enter : ",0.3)
-   ask_menu()
 def ask_menu():
+  try:
    menu = int(input(""))
    if menu == 1:
      cmd.profile()
@@ -59,7 +43,10 @@ def ask_menu():
      logout()
    else:
      ask_menu(1)
-
+  except Exception as e:
+   cmd.typing("\n - Invalid Menu Enter Again",0.3)
+   cmd.typing("\n\n[ ~ ] Enter : ",0.3)
+   ask_menu()
 def verify_login():
   with open(".key.json","r") as e:
     data = json.load(e)
