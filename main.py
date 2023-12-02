@@ -11,7 +11,7 @@ import command as cmd
 from pick import pick
 from colour import Color
 # Code Info
-verison = 1.1
+verison = 1.2
 
 def main_menu():
    cmd.logo(0.1)
